@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 
 function Subtotal() {
   const navigate = useNavigate();
-  const [{basket}, dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <div className='subtotal'>
         < CurrencyFormat 
@@ -29,14 +29,14 @@ function Subtotal() {
              thousandSeparator={true}
              prefix = {"$"}
              />
-             <button onClick={e => navigate('./payment')}>Proceed to Checkout</button>
+             <button onClick={()=> navigate('/payment')}>Proceed to Checkout</button>
              {/* {
               getBasketTotal(basket) > 0
               ? <buttton onClick={e => history.push("/payment")}>Proceed to Checkout</buttton>
               : <button disabled onClick={e => history.push('/payment')}>Proceed to Checkout</button>
              } */}
     </div>
-  )
+  );
 }
 
-export default Subtotal
+export default Subtotal;

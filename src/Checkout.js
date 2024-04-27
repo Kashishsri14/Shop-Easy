@@ -5,7 +5,7 @@ import { useStateValue } from './StateProvider';
 import CheckoutProduct from './CheckoutProduct';
 
 function Checkout() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }] = useStateValue();
   return (
     <div className='checkout'>
        <div className='checkout__left'>
@@ -23,17 +23,14 @@ function Checkout() {
               rating = {item.rating}
               />
             ))}
-            {/* CheckoutProduct */}
-            {/* CheckoutProduct */}
-            {/* CheckoutProduct */}
-            {/* CheckoutProduct */}
+
             </div>  
             </div>
           <div className='checkout__right'>
             <Subtotal/>
             </div> 
             </div>
-  )
+  );
 }
 
 export default Checkout

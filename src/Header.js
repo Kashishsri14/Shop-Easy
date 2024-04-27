@@ -10,7 +10,7 @@ import { auth } from "./firebase"
 
 function Header() {
 
-    const [{ basket, user },dispatch] = useStateValue();
+    const [{ basket, user }, dispatch] = useStateValue();
 
     const handleAuthentication = () =>{
         if(user){
@@ -23,6 +23,7 @@ function Header() {
             <img
                 className="header__logo"
                 src ="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                alt = "amazon logo"
                 />
             </Link>
 
@@ -34,7 +35,7 @@ function Header() {
 
 
             <div className="header__nav">
-                <Link to ={!user && './login'}>
+                <Link to ={!user && '/login'}>
                 <div onClick={handleAuthentication} className='header__option'>
                     <span className='header__optionLineOne'>Hello {!user ? 'Guest': user.email}</span>  
                      {/* can also use user?.email via optional chaining  */}
@@ -52,6 +53,8 @@ function Header() {
                 <span className='header__optionLineOne'>Your</span>
                 <span className='header__optionLineTwo'>Prime</span>
                 </div>
+
+                
                 <Link to="/checkout">
                 <div className='header__optionBasket'>
                     <ShoppingBasketIcon/>
@@ -68,4 +71,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
