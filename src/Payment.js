@@ -166,16 +166,4 @@ console.log('👱', user)
     )
 }
 
-
-// function getClientSecret() {
-//     // Assuming data is the object containing the clientSecret property
-//     if (baseURL && baseURL.clientSecret) {
-//       return baseURL.clientSecret;
-//     } else {
-//       console.error('clientSecret is undefined');
-//       // Handle the error or return a default value
-//       return null;
-//     }
-//   }
-
 export default Payment;
