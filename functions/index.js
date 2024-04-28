@@ -1,21 +1,11 @@
 
-// const {onRequest} = require("firebase-functions/v2/https");
-// const logger = require("firebase-functions/logger");
-
-// Create and deploy your first functions
-// https://firebase.google.com/docs/functions/get-started
-
-// exports.helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
 
 const functions = require('firebase-functions');
 const express = require("express");
 const cors = require("cors");
 // const { request } = require('express');
 const stripe = require("stripe")
-("sk_test_51P6dkTSBJVCyXidXSWEu3UKcxyxMER48THfyfXDcAAD9xwSHYhwy9ECymj9Y5L9Y1mBqNBiFLdLhhEMpzaPwo6Uw00qCvpqLOk")
+("")
 //API 
 
 

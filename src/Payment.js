@@ -17,13 +17,6 @@ function Payment() {
     const stripe = useStripe();
     const elements = useElements();
 
-    return (
-        <form>
-          {/* Enable visibility on page load for CardElement */}
-          <CardElement options={{ hidePostalCode: true }} />
-    
-        </form>
-      );
     
     // const [currentstate, function to update the state] = useState("Initial State")
     const [processing, setProcessing] = useState("");
@@ -164,6 +157,9 @@ console.log('👱', user)
         </div>
     </div>
     )
+
+    
 }
+
 
 export default Payment;
